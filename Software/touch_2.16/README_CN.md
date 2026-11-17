@@ -89,7 +89,7 @@ LM20B 条目目前使用 LM20A 的参考图片，并在详情页标注参考图�
 
 ## 外部 I²C 联动
 
-完整约定见本地 `XIAO_Touch_I2C_Protocol_v1.md`，路径列于文末。协议辅助函数位于 [xf_touch_protocol.h](components/xf_core/include/xf_touch_protocol.h)。
+完整约定见 [XIAO_Touch_I2C_Protocol_v1.md](../MFSZ_PCB/docs/XIAO_Touch_I2C_Protocol_v1.md)。协议辅助函数位于 [xf_touch_protocol.h](components/xf_core/include/xf_touch_protocol.h)。
 
 - 连接后每 20 ms 轮询 STATUS，每轮最多处理八条事件，再进入后续轮询。
 - 读取寄存器时，先写寄存器指针并发送 STOP，再一次性读取四字节并发送 STOP；不能替换为 repeated-start 组合读取或四次单字节读取。
@@ -169,10 +169,10 @@ UI 控制器通过 FreeRTOS 队列串行处理业务事件。`xf_core` 不依赖
 | esp_lcd_touch_cst9220 | 0.1.1 |
 | cmake_utilities | 0.5.3，锁定的间接依赖 |
 
-在已初始化的 ESP-IDF PowerShell 终端中，使用现有本地工具和完整依赖：
+在已初始化的 ESP-IDF PowerShell 终端中，从仓库根目录执行：
 
 ```powershell
-Set-Location 'D:\XIAO_test\MFSZ26\XIAO_Family\Software\touch_2.16'
+Set-Location Software/touch_2.16
 idf.py --no-ccache build
 ```
 
@@ -185,19 +185,19 @@ idf.py -p COM13 flash
 idf.py -p COM13 monitor
 ```
 
-使用 Ctrl+] 退出日志监视器。上述命令不包含安装 SDK 或获取素材的步骤；但 ESP-IDF 组件管理器可能自动获取缺失依赖。在禁止下载的工作范围内，应先确认本地组件完整，缺失时停止并检查。保留 LVGL 本地覆盖声明；本工程已有目标和配置，常规重新编译无需执行重置目标或 menuconfig。
+使用 Ctrl+] 退出日志监视器。ESP-IDF SDK 和工具链须预先安装。组件版本由 `main/idf_component.yml` 和 `dependencies.lock` 定义；组件管理器可能下载缺失的注册表依赖。LVGL 9.4.0 通过清单中的 `override_path` 引用 `managed_components/lvgl__lvgl`。工程已配置 `esp32s3` 目标，重新执行 `set-target` 会重置构建配置。
 
 ## 内容与资源维护
 
-普通编译使用现有生成资源，无需重新转换。重新生成需要本地源资料和已安装的转换工具。
+固件构建读取已生成的图片和 C/H 资源，不自动执行资源生成脚本。源资源位于 [resources/](resources/)，文件定义、工具前提和再生成命令见[资源维护说明](resources/README.md)。
 
 | 内容 | 维护来源 / 生成器 |
 | --- | --- |
-| 产品数据和固定 ID | 交付包中的 `product_catalog.json`、`asset_manifest.json`；`tools/gen_xf_data.py` |
-| 英文界面与中文翻译 | 交付包中的 `ui_strings.en.json`，以及 `tools/gen_xf_strings.py` 中的翻译表 |
+| 产品数据和固定 ID | `resources/product_catalog.json`、`resources/asset_manifest.json`；`tools/gen_xf_data.py` |
+| 英文界面与中文翻译 | `resources/ui_strings.en.json`，以及 `tools/gen_xf_strings.py` 中的翻译表 |
 | 字库 | `tools/gen_xf_fonts.py`；使用已安装的 `C:\Windows\Fonts\NotoSansSC-VF.ttf` 和本地 `tools/node_modules/lv_font_conv` |
-| 品牌 Logo | 提供的 SVG 经交付包品牌资源生成；`tools/gen_xf_brand.py` |
-| 产品图片 | 交付包资源清单及转换后的大图、缩略图；`tools/convert_assets.py` |
+| 品牌 Logo | `resources/assets/brand/` 中的 SVG、PNG 和清单；`tools/gen_xf_brand.py` |
+| 产品图片 | `resources/asset_manifest.json`、`resources/assets/svg/`、`hero/`、`thumb/`；`tools/convert_assets.py` |
 
 修改翻译文案后，必须先生成文本，再生成字体，以包含新增汉字：
 
@@ -206,7 +206,7 @@ python -B tools/gen_xf_strings.py
 python -B tools/gen_xf_fonts.py
 ```
 
-字体生成器需要 PATH 中已有 Node.js 和现有本地转换器，不会自动安装依赖。保留产品 ID、资源 ID 和 KEY_ID 映射；通过资源映射替换图片，在真实图片就绪前保留参考图片标记。应重新生成 C/H 资源，不直接修改生成表。普通构建不需要执行旧版生成脚本。
+字体生成需要 Node.js、`tools/package-lock.json` 锁定的 `lv_font_conv` 和上述字体文件；转换器安装命令为 `npm --prefix tools ci`，字体须单独安装。修改资源时应保持产品 ID、资源 ID 和 KEY_ID 映射稳定，并通过生成器更新 C/H 文件。参考图片由清单中的 `is_placeholder` 和 `placeholder_product_id` 标记。`build_assets.py` 等旧版脚本面向 `main/model/`，当前组件使用 `gen_xf_*` 脚本。
 
 ## 本机验证
 
@@ -240,15 +240,12 @@ gcc -std=gnu17 -Wall -Wextra -Werror `
 
 屏幕与触摸的实际表现、实际帧率、外部展板通信、灯光和喇叭输出仍需实机验证。屏幕初始化时序和信号完整性与实际板卡有关。启动刷色测试已关闭，上电直接进入产品界面。
 
-## 本地资料路径
+## 仓库资料
 
-| 资料 | 本地路径 |
+| 资料 | 路径 |
 | --- | --- |
-| 固件工程 | `D:\XIAO_test\MFSZ26\XIAO_Family\Software\touch_2.16` |
-| 主板原理图 | `D:\XIAO_test\MFSZ26\XIAO_Family\Hardware\XIAO-Console-AMOLED-Mainboard` |
-| 屏幕规格书 | `D:\XIAO_test\MFSZ26\XIAO_Family\Hardware\Display` |
-| 原始 XIAO SVG 图片 | `D:\XIAO_test\MFSZ26\XIAO_Family\Hardware\picture` |
-| 交互设计、数据与资源交付包 | `C:\Users\seeed\Documents\ChatGPT\MFSZ 2026\屏幕交互设计` |
-| 外部 I²C 协议 | `C:\Users\seeed\Documents\ChatGPT\MFSZ 2026\协议\XIAO_Touch_I2C_Protocol_v1.md` |
-
-这些绝对路径对应当前工作站。普通编译可直接使用现有生成资源；重新生成时需要对应的本地源资料。维护应限定在已授权的文件和任务范围内；下载依赖、修改 SDK 或全局设置、烧录设备均需对应授权。
+| 产品 SVG 原图与 PNG 资源 | [resources/assets/](resources/assets/) |
+| 资源映射与校验值 | [asset_manifest.json](resources/asset_manifest.json) |
+| 产品目录源数据 | [product_catalog.json](resources/product_catalog.json) |
+| 资源生成流程 | [resources/README.md](resources/README.md) |
+| 外部 I²C 协议 | [XIAO_Touch_I2C_Protocol_v1.md](../MFSZ_PCB/docs/XIAO_Touch_I2C_Protocol_v1.md) |

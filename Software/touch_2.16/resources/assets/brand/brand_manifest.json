@@ -1,0 +1,19 @@
+{
+  "source_sha256": "1e52a379b957c5a2141bb1331ca978a1f8f0b7a4fcae0e34396f0cc8b28b8473",
+  "original_snapshot": "assets/brand/seeed-logo-original.svg",
+  "normalized_svg": "assets/brand/seeed-logo-tight.svg",
+  "normalization": "Crop the SVG viewBox only; preserve every path, transform, clip path and original fill color.",
+  "logo_source_colors": [
+    "#88B928",
+    "#003948"
+  ],
+  "ui_primary_colors": [
+    "#8FC31F",
+    "#004966"
+  ],
+  "asset_key": "seeed_brand_logo",
+  "font_substitution_allowed": false,
+  "background_for_logo": "#F5F8F7",
+  "source_svg": "assets/brand/seeed-logo-original.svg",
+  "source_filename": "彩色Logo.svg"
+}

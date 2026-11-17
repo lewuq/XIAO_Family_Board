@@ -30,10 +30,31 @@ idf.py --no-ccache build
 - [屏幕固件中文说明](Software/touch_2.16/README_CN.md)
 - [Screen firmware documentation](Software/touch_2.16/README.md)
 
-## 文件说明
+## 资源与构建输入
 
-仓库忽略 `build/`、`.pio/`、`node_modules/`、Python 缓存及编译中间文件。屏幕图片的 `.bin` 资源、生成的字体/产品数据源码、`sdkconfig` 和依赖锁文件属于构建输入，予以保留。
+屏幕工程的资源文件位于 [Software/touch_2.16/resources](Software/touch_2.16/resources)。下表路径均相对于 `Software/touch_2.16`。
 
-`touch_2.16/managed_components` 保留现有依赖源码，包括项目通过本地路径引用的 LVGL 9.4.0。第三方组件的许可证随其源码保留。需要重新生成字体时，可在 `touch_2.16/tools` 中执行 `npm ci` 恢复字体转换工具。
+| 路径 | 用途 |
+| --- | --- |
+| `resources/assets/svg/` | 18 个产品资源条目的 SVG 源文件 |
+| `resources/assets/hero/`、`resources/assets/thumb/` | 18 张产品大图和 18 张缩略图，PNG 格式 |
+| `resources/assets/brand/` | Logo SVG、PNG 及来源校验清单 |
+| `resources/asset_manifest.json` | 产品 ID、资源 ID、文件路径、SHA-256 和参考图片映射 |
+| `resources/product_catalog.json`、`resources/ui_strings.en.json` | 产品数据及界面文本的生成输入 |
+| `main/assets/img/` | 36 个 RGB565A8 二进制图片，由 `xf_assets` 组件链接到应用固件 |
+| `components/xf_assets/generated/`、`components/xf_data/generated/`、`components/xf_ui/generated/` | 字库、Logo、产品数据和双语文本的生成源码 |
+| `sdkconfig`、`sdkconfig.defaults.esp32s3`、`partitions.csv` | ESP32-S3 构建配置及 Flash 分区定义 |
 
-项目原有文档和辅助脚本中的 `D:\...`、`C:\...` 路径对应原开发电脑；在其他电脑上使用时，请按本地 SDK、字体及素材位置调整。普通固件构建使用仓库内现有的生成资源。
+`idf.py build` 使用已生成的图片与 C/H 资源；该命令不执行图片转换、文本生成或字库生成。图片和字体更新后的再生成步骤见[资源维护说明](Software/touch_2.16/resources/README.md)。
+
+`nrf54lm20b_sense` 当前使用 `nrf54lm20a_sense` 的参考图片，映射关系由 `asset_manifest.json` 中的 `is_placeholder` 和 `placeholder_product_id` 声明。
+
+## 依赖管理
+
+屏幕工程通过 `main/idf_component.yml` 声明组件版本，通过 `dependencies.lock` 记录解析结果。`managed_components/` 包含组件源码，LVGL 9.4.0 使用清单中的 `override_path` 配置。各第三方组件适用其目录中的许可证。
+
+字体转换工具由 `tools/package.json` 和 `tools/package-lock.json` 管理。仅重新生成字库时需要在 `Software/touch_2.16/tools` 目录执行 `npm ci` 安装 `lv_font_conv`；此外还需 Node.js 和字库源文件。安装字体转换工具不包含字体文件安装。
+
+## 版本控制范围
+
+`.gitignore` 排除 ESP-IDF/CMake 的 `build/`、PlatformIO 的 `.pio/`、Node.js 的 `node_modules/`、Python 缓存及编译中间文件。`main/assets/img/*.bin` 是图片链接输入，纳入版本控制；应用和引导程序的二进制输出位于 `build/`，由目录规则排除。

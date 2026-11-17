@@ -89,7 +89,7 @@ The current configuration targets ESP32-S3 with 16 MB flash; PSRAM is not enable
 
 ## External I²C behavior
 
-The complete local contract is `XIAO_Touch_I2C_Protocol_v1.md`; its path is listed below. Protocol helpers live in [xf_touch_protocol.h](components/xf_core/include/xf_touch_protocol.h).
+The complete contract is [XIAO_Touch_I2C_Protocol_v1.md](../MFSZ_PCB/docs/XIAO_Touch_I2C_Protocol_v1.md). Protocol helpers live in [xf_touch_protocol.h](components/xf_core/include/xf_touch_protocol.h).
 
 - Poll STATUS every 20 ms while connected. Event processing is bounded to eight events per iteration, followed by another poll.
 - Read registers by writing the pointer with STOP, then reading all four bytes in one transaction with STOP. Do not substitute a repeated-start combined read or four separate byte reads.
@@ -169,10 +169,10 @@ Validated environment: ESP-IDF 5.5.2, target `esp32s3`. The component manifest p
 | esp_lcd_touch_cst9220 | 0.1.1 |
 | cmake_utilities | 0.5.3, locked transitive dependency |
 
-Use an initialized ESP-IDF PowerShell terminal with the existing local tools and complete dependencies:
+From the repository root, use an initialized ESP-IDF PowerShell terminal:
 
 ```powershell
-Set-Location 'D:\XIAO_test\MFSZ26\XIAO_Family\Software\touch_2.16'
+Set-Location Software/touch_2.16
 idf.py --no-ccache build
 ```
 
@@ -185,19 +185,19 @@ idf.py -p COM13 flash
 idf.py -p COM13 monitor
 ```
 
-Exit the monitor with Ctrl+]. The commands above do not install the SDK or fetch assets. ESP-IDF's component manager may fetch missing dependencies; stop and inspect incomplete local components before building under a no-download requirement. Do not remove the LVGL local override or run a target reset/menuconfig merely to rebuild this configured project.
+Exit the monitor with Ctrl+]. Install the ESP-IDF SDK and toolchain before building. Component versions are defined by `main/idf_component.yml` and `dependencies.lock`; the component manager may download missing registry dependencies. LVGL 9.4.0 is referenced through the manifest's `override_path` at `managed_components/lvgl__lvgl`. The project already targets `esp32s3`; running `set-target` again resets the build configuration.
 
 ## Content and asset maintenance
 
-Normal firmware builds use the existing generated resources; regeneration is optional and requires the local source package and installed conversion tools.
+Firmware builds consume generated image and C/H resources without running the generators. Source assets are included in [resources/](resources/); file definitions, tool prerequisites and regeneration commands are documented in the [resource maintenance guide](resources/README.md).
 
 | Content | Authoring source / generator |
 | --- | --- |
-| Product data and stable IDs | Handoff `product_catalog.json` + `asset_manifest.json`; `tools/gen_xf_data.py` |
-| English UI / Chinese translations | Handoff `ui_strings.en.json` + translation tables in `tools/gen_xf_strings.py` |
+| Product data and stable IDs | `resources/product_catalog.json` + `resources/asset_manifest.json`; `tools/gen_xf_data.py` |
+| English UI / Chinese translations | `resources/ui_strings.en.json` + translation tables in `tools/gen_xf_strings.py` |
 | Fonts | `tools/gen_xf_fonts.py`; installed `C:\Windows\Fonts\NotoSansSC-VF.ttf` and local `tools/node_modules/lv_font_conv` |
-| Brand mark | Supplied SVG through handoff brand assets; `tools/gen_xf_brand.py` |
-| Product images | Handoff manifest and converted hero/thumbnail payloads; `tools/convert_assets.py` |
+| Brand mark | SVG, PNG and manifest in `resources/assets/brand/`; `tools/gen_xf_brand.py` |
+| Product images | `resources/asset_manifest.json` and `resources/assets/{svg,hero,thumb}/`; `tools/convert_assets.py` |
 
 After changing translated copy, regenerate strings **before** fonts to include the required Chinese glyphs:
 
@@ -206,7 +206,7 @@ python -B tools/gen_xf_strings.py
 python -B tools/gen_xf_fonts.py
 ```
 
-The font generator requires Node.js on PATH and the existing local converter; it does not install packages. Keep product/asset IDs and KEY_ID mappings stable. Replace images through their asset mapping, retain placeholder labels until authentic images exist, and regenerate C/H resources instead of editing generated tables manually. Legacy generator scripts are not required for the normal build.
+Font generation requires Node.js, the `lv_font_conv` version locked by `tools/package-lock.json`, and the font file listed above. Install the converter with `npm --prefix tools ci`; install the font separately. Keep product/asset IDs and KEY_ID mappings stable, and update generated C/H resources through the generators. Reference images are declared by `is_placeholder` and `placeholder_product_id` in the asset manifest. Legacy scripts such as `build_assets.py` target `main/model/`; the current components use the `gen_xf_*` scripts.
 
 ## Native verification
 
@@ -240,15 +240,12 @@ The latest software validation on **2026-11-17** completed:
 
 Physical display/touch behavior, frame rate, external-board communication, LED output and speaker output require hardware validation. Panel initialization timings and signal integrity remain board-dependent. Boot color-sweep tests are disabled; startup enters the product UI directly.
 
-## Local project references
+## Repository references
 
-| Reference | Local path |
+| Reference | Path |
 | --- | --- |
-| Firmware | `D:\XIAO_test\MFSZ26\XIAO_Family\Software\touch_2.16` |
-| Mainboard schematics | `D:\XIAO_test\MFSZ26\XIAO_Family\Hardware\XIAO-Console-AMOLED-Mainboard` |
-| Display specifications | `D:\XIAO_test\MFSZ26\XIAO_Family\Hardware\Display` |
-| Original XIAO SVG images | `D:\XIAO_test\MFSZ26\XIAO_Family\Hardware\picture` |
-| Design/data/asset handoff | `C:\Users\seeed\Documents\ChatGPT\MFSZ 2026\屏幕交互设计` |
-| External I²C protocol | `C:\Users\seeed\Documents\ChatGPT\MFSZ 2026\协议\XIAO_Touch_I2C_Protocol_v1.md` |
-
-These absolute paths describe the current workstation. Existing generated resources are sufficient for an ordinary build; regeneration requires the corresponding local sources. Project maintenance must remain within the requested scope; dependency downloads, SDK/global configuration changes and device flashing require their own authorization.
+| Product SVG and PNG assets | [resources/assets/](resources/assets/) |
+| Asset mapping and checksums | [asset_manifest.json](resources/asset_manifest.json) |
+| Product catalogue source | [product_catalog.json](resources/product_catalog.json) |
+| Resource generation workflow | [resources/README.md](resources/README.md) |
+| External I²C protocol | [XIAO_Touch_I2C_Protocol_v1.md](../MFSZ_PCB/docs/XIAO_Touch_I2C_Protocol_v1.md) |

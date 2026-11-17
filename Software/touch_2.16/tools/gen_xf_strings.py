@@ -14,7 +14,7 @@ import sys
 from pathlib import Path
 
 PROJECT = Path(__file__).resolve().parent.parent
-DESIGN = Path(r"C:\Users\seeed\Documents\ChatGPT\MFSZ 2026\屏幕交互设计")
+DESIGN = PROJECT / "resources"
 DEFAULT_SOURCE = DESIGN / "ui_strings.en.json"
 OUT = PROJECT / "components/xf_ui/generated"
 ZH = {

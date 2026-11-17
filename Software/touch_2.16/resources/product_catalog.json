@@ -1,0 +1,2175 @@
+{
+  "schema_version": 1,
+  "catalog_version": "2026-11-13-v1.1",
+  "content_language": "en",
+  "product_count": 18,
+  "status_values": [
+    "verified",
+    "pending",
+    "conflict",
+    "not_applicable"
+  ],
+  "sources": {
+    "samd21": "https://wiki.seeedstudio.com/Seeeduino-XIAO/",
+    "rp2040": "https://wiki.seeedstudio.com/XIAO-RP2040/",
+    "rp2350": "https://wiki.seeedstudio.com/xiao_rp2350_arduino/",
+    "rp2350_soc": "https://www.raspberrypi.com/products/rp2350/",
+    "ra4m1": "https://wiki.seeedstudio.com/getting_started_xiao_ra4m1/",
+    "stm32c5": "https://wiki.seeedstudio.com/xiao_stm32c5_getting_started/",
+    "mg24": "https://wiki.seeedstudio.com/xiao_mg24_getting_started/",
+    "nrf52840": "https://wiki.seeedstudio.com/XIAO_BLE/",
+    "nrf54l15": "https://wiki.seeedstudio.com/xiao_nrf54l15_sense_getting_started/",
+    "lm20a": "https://wiki.seeedstudio.com/xiao_nrf54lm20a_getting_started/",
+    "lm20b_soc": "https://www.nordicsemi.com/Products/nRF54LM20B",
+    "esp32c3": "https://wiki.seeedstudio.com/XIAO_ESP32C3_Getting_Started/",
+    "esp32c5": "https://wiki.seeedstudio.com/xiao_esp32c5_getting_started/",
+    "esp32c5_soc": "https://www.espressif.com/sites/default/files/documentation/esp32-c5_datasheet_en.pdf",
+    "esp32c6": "https://wiki.seeedstudio.com/xiao_esp32c6_getting_started/",
+    "esp32s3": "https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/",
+    "pio": "https://www.raspberrypi.com/documentation/pico-sdk/hardware.html",
+    "co5300": "https://components.espressif.com/components/espressif/esp_lcd_co5300/versions/2.2.0/readme",
+    "cst9220": "https://components.espressif.com/components/espressif/esp_lcd_touch_cst9220/versions/0.1.1/readme",
+    "lvgl_port": "https://components.espressif.com/components/espressif/esp_lvgl_port/versions/2.9.0/readme",
+    "lvgl9": "https://docs.lvgl.io/9.4/details/main-modules/image.html"
+  },
+  "products": [
+    {
+      "id": "samd21",
+      "name": "XIAO SAMD21",
+      "short_name": "SAMD21",
+      "manufacturer": "Microchip",
+      "asset_key": "samd21_front",
+      "source_ids": [
+        "samd21"
+      ],
+      "feature_en": "10-bit DAC",
+      "feature_zh": "模拟电压输出",
+      "applications_zh": [
+        "模拟控制",
+        "电子乐器",
+        "入门教学"
+      ],
+      "specs": {
+        "processor": {
+          "value": "ATSAMD21G18A / Cortex-M0+",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "cpu_clock_max": {
+          "value": 48,
+          "unit": "MHz",
+          "status": "verified",
+          "scope": "board"
+        },
+        "sram": {
+          "value": 32,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm": {
+          "value": 256,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm_type": {
+          "value": "Flash",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "external_flash": {
+          "value": 0,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "psram": {
+          "value": 0,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "exposed_gpio": {
+          "value": 11,
+          "unit": "count",
+          "status": "verified",
+          "scope": "board"
+        },
+        "wireless": {
+          "value": [],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "sensors": {
+          "value": [],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "interfaces": {
+          "value": [
+            "I2C",
+            "UART",
+            "SPI",
+            "USB",
+            "DAC"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "onboard_battery_charging": {
+          "value": false,
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "footprint": {
+          "value": [
+            21,
+            17.8
+          ],
+          "unit": "mm",
+          "status": "verified",
+          "scope": "board"
+        }
+      },
+      "source_svg": "D:\\XIAO_test\\MFSZ26\\XIAO_Family\\Hardware\\picture\\XIAO SAMD21 Front.svg",
+      "editorial_notes_zh": "电池充电不受支持；DAC 为真实模拟输出。",
+      "applications_en": [
+        "Analog control",
+        "Electronic instruments",
+        "STEM education"
+      ],
+      "notes_en": "True 10-bit DAC output. No onboard battery charging."
+    },
+    {
+      "id": "samd21_plus",
+      "name": "XIAO SAMD21 Plus",
+      "short_name": "SAMD21 Plus",
+      "manufacturer": "Microchip",
+      "asset_key": "samd21_plus_front",
+      "source_ids": [
+        "samd21"
+      ],
+      "feature_en": "More GPIOs",
+      "feature_zh": "扩展输入输出",
+      "applications_zh": [
+        "多传感器采集",
+        "多路控制"
+      ],
+      "specs": {
+        "processor": {
+          "value": "ATSAMD21G18A / Cortex-M0+",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "cpu_clock_max": {
+          "value": 48,
+          "unit": "MHz",
+          "status": "verified",
+          "scope": "board"
+        },
+        "sram": {
+          "value": 32,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm": {
+          "value": 256,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm_type": {
+          "value": "Flash",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "external_flash": {
+          "value": 0,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "psram": {
+          "value": 0,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "exposed_gpio": {
+          "value": 27,
+          "unit": "count",
+          "status": "verified",
+          "scope": "board"
+        },
+        "wireless": {
+          "value": [],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "sensors": {
+          "value": [],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "interfaces": {
+          "value": [
+            "2x I2C",
+            "UART",
+            "SPI",
+            "I2S",
+            "USB",
+            "DAC"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "onboard_battery_charging": {
+          "value": true,
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "footprint": {
+          "value": [
+            21,
+            17.8
+          ],
+          "unit": "mm",
+          "status": "verified",
+          "scope": "board"
+        }
+      },
+      "source_svg": "D:\\XIAO_test\\MFSZ26\\XIAO_Family\\Hardware\\picture\\XIAO SAMD21 Plus Front.svg",
+      "editorial_notes_zh": "",
+      "applications_en": [
+        "Multi-sensor systems",
+        "Embedded control"
+      ],
+      "notes_en": "Expanded GPIO and onboard battery management."
+    },
+    {
+      "id": "stm32c5",
+      "name": "XIAO STM32C5",
+      "short_name": "STM32C5",
+      "manufacturer": "STMicroelectronics",
+      "asset_key": "stm32c5_front",
+      "source_ids": [
+        "stm32c5"
+      ],
+      "feature_en": "CAN FD",
+      "feature_zh": "CAN FD 总线连接",
+      "applications_zh": [
+        "机器人节点",
+        "总线数据记录"
+      ],
+      "specs": {
+        "processor": {
+          "value": "STM32C5A3CG / Cortex-M33",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "cpu_clock_max": {
+          "value": 144,
+          "unit": "MHz",
+          "status": "verified",
+          "scope": "board"
+        },
+        "sram": {
+          "value": 256,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm": {
+          "value": 1024,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm_type": {
+          "value": "Flash",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "external_flash": {
+          "value": 16,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "psram": {
+          "value": 0,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "exposed_gpio": {
+          "value": null,
+          "unit": "count",
+          "status": "pending",
+          "scope": "board"
+        },
+        "wireless": {
+          "value": [],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "sensors": {
+          "value": [
+            "6-axis IMU"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "interfaces": {
+          "value": [
+            "I2C",
+            "UART",
+            "SPI",
+            "USB",
+            "2x CAN FD"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "onboard_battery_charging": {
+          "value": true,
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "footprint": {
+          "value": null,
+          "unit": "mm",
+          "status": "pending",
+          "scope": "board",
+          "note": "需按该型号机械图独立确认，不能仅由系列通用外形推断。"
+        }
+      },
+      "source_svg": "D:\\XIAO_test\\MFSZ26\\XIAO_Family\\Hardware\\picture\\xiao-stm32c5-Front.svg",
+      "editorial_notes_zh": "一通道带板载 CAN 收发器；另一通道需外接收发器。GPIO 总数未按电源焊盘计入。",
+      "applications_en": [
+        "Robotics",
+        "CAN data logging"
+      ],
+      "notes_en": "One CAN FD channel includes an onboard transceiver. The second channel requires an external transceiver."
+    },
+    {
+      "id": "mg24_sense",
+      "name": "XIAO MG24 Sense",
+      "short_name": "MG24 Sense",
+      "manufacturer": "Silicon Labs",
+      "asset_key": "mg24_sense_front",
+      "source_ids": [
+        "mg24"
+      ],
+      "feature_en": "Zigbee + IMU",
+      "feature_zh": "无线连接与运动感知",
+      "applications_zh": [
+        "智能家居",
+        "无线姿态检测"
+      ],
+      "specs": {
+        "processor": {
+          "value": "EFR32MG24 / Cortex-M33",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "cpu_clock_max": {
+          "value": 78,
+          "unit": "MHz",
+          "status": "verified",
+          "scope": "board"
+        },
+        "sram": {
+          "value": 256,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm": {
+          "value": 1536,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm_type": {
+          "value": "Flash",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "external_flash": {
+          "value": 4,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "psram": {
+          "value": 0,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "exposed_gpio": {
+          "value": 19,
+          "unit": "count",
+          "status": "verified",
+          "scope": "board"
+        },
+        "wireless": {
+          "value": [
+            "Bluetooth LE",
+            "Thread",
+            "Zigbee",
+            "Matter"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "sensors": {
+          "value": [
+            "6-axis IMU",
+            "Analog microphone"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "interfaces": {
+          "value": [
+            "I2C",
+            "2x UART",
+            "2x SPI"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "onboard_battery_charging": {
+          "value": true,
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "footprint": {
+          "value": [
+            21,
+            17.8
+          ],
+          "unit": "mm",
+          "status": "verified",
+          "scope": "board"
+        }
+      },
+      "source_svg": "D:\\XIAO_test\\MFSZ26\\XIAO_Family\\Hardware\\picture\\XIAO MG24 Sense Front.svg",
+      "editorial_notes_zh": "",
+      "applications_en": [
+        "Smart home",
+        "Wireless motion sensing"
+      ],
+      "notes_en": "Includes a six-axis IMU and an analog microphone. Wireless features require the matching software stack."
+    },
+    {
+      "id": "rp2350",
+      "name": "XIAO RP2350",
+      "short_name": "RP2350",
+      "manufacturer": "Raspberry Pi",
+      "asset_key": "rp2350_front",
+      "source_ids": [
+        "rp2350",
+        "rp2350_soc",
+        "pio"
+      ],
+      "feature_en": "Arm / RISC-V",
+      "feature_zh": "可选处理器架构",
+      "applications_zh": [
+        "嵌入式控制",
+        "架构教学",
+        "自定义时序"
+      ],
+      "specs": {
+        "processor": {
+          "value": "RP2350 / Dual Cortex-M33 or Hazard3 RISC-V",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "cpu_clock_max": {
+          "value": 150,
+          "unit": "MHz",
+          "status": "verified",
+          "scope": "board"
+        },
+        "sram": {
+          "value": 520,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm": {
+          "value": 0,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm_type": {
+          "value": "None",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "external_flash": {
+          "value": 2,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "psram": {
+          "value": 0,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "exposed_gpio": {
+          "value": 19,
+          "unit": "count",
+          "status": "verified",
+          "scope": "board"
+        },
+        "wireless": {
+          "value": [],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "sensors": {
+          "value": [],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "interfaces": {
+          "value": [
+            "2x I2C",
+            "2x UART",
+            "2x SPI",
+            "USB",
+            "PIO"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "onboard_battery_charging": {
+          "value": true,
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "footprint": {
+          "value": [
+            21,
+            17.8
+          ],
+          "unit": "mm",
+          "status": "verified",
+          "scope": "board"
+        },
+        "pio_state_machines": {
+          "value": 12,
+          "unit": "count",
+          "status": "verified",
+          "scope": "soc"
+        }
+      },
+      "source_svg": "D:\\XIAO_test\\MFSZ26\\XIAO_Family\\Hardware\\picture\\XIAO RP2350 Front.svg",
+      "editorial_notes_zh": "运行时使用两个处理核心；不得表述为四核心同时运行。",
+      "applications_en": [
+        "Embedded control",
+        "Architecture education",
+        "Custom interfaces"
+      ],
+      "notes_en": "Select Arm Cortex-M33 or Hazard3 RISC-V. Two processor cores run at a time."
+    },
+    {
+      "id": "rp2040",
+      "name": "XIAO RP2040",
+      "short_name": "RP2040",
+      "manufacturer": "Raspberry Pi",
+      "asset_key": "rp2040_front",
+      "source_ids": [
+        "rp2040",
+        "pio"
+      ],
+      "feature_en": "PIO State Machines",
+      "feature_zh": "可编程硬件时序",
+      "applications_zh": [
+        "灯光控制",
+        "自定义通信接口"
+      ],
+      "specs": {
+        "processor": {
+          "value": "RP2040 / Dual Cortex-M0+",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "cpu_clock_max": {
+          "value": 133,
+          "unit": "MHz",
+          "status": "verified",
+          "scope": "board"
+        },
+        "sram": {
+          "value": 264,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm": {
+          "value": 0,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm_type": {
+          "value": "None",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "external_flash": {
+          "value": 2,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "psram": {
+          "value": 0,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "exposed_gpio": {
+          "value": 11,
+          "unit": "count",
+          "status": "verified",
+          "scope": "board"
+        },
+        "wireless": {
+          "value": [],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "sensors": {
+          "value": [],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "interfaces": {
+          "value": [
+            "I2C",
+            "UART",
+            "SPI",
+            "USB",
+            "PIO"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "onboard_battery_charging": {
+          "value": false,
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "footprint": {
+          "value": [
+            21,
+            17.8
+          ],
+          "unit": "mm",
+          "status": "verified",
+          "scope": "board"
+        },
+        "pio_state_machines": {
+          "value": 8,
+          "unit": "count",
+          "status": "verified",
+          "scope": "soc"
+        }
+      },
+      "source_svg": "D:\\XIAO_test\\MFSZ26\\XIAO_Family\\Hardware\\picture\\XIAO RP2040 Front.svg",
+      "editorial_notes_zh": "PIO 是独立硬件状态机；电池充电与 Plus 版分开记录。",
+      "applications_en": [
+        "LED control",
+        "Custom communication"
+      ],
+      "notes_en": "PIO state machines provide programmable hardware timing. Battery charging is not included."
+    },
+    {
+      "id": "rp2040_plus",
+      "name": "XIAO RP2040 Plus",
+      "short_name": "RP2040 Plus",
+      "manufacturer": "Raspberry Pi",
+      "asset_key": "rp2040_plus_front",
+      "source_ids": [
+        "rp2040",
+        "pio"
+      ],
+      "feature_en": "More GPIOs",
+      "feature_zh": "更多外设连接",
+      "applications_zh": [
+        "交互控制器",
+        "多传感器连接"
+      ],
+      "specs": {
+        "processor": {
+          "value": "RP2040 / Dual Cortex-M0+",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "cpu_clock_max": {
+          "value": 133,
+          "unit": "MHz",
+          "status": "verified",
+          "scope": "board"
+        },
+        "sram": {
+          "value": 264,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm": {
+          "value": 0,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm_type": {
+          "value": "None",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "external_flash": {
+          "value": 2,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "psram": {
+          "value": 0,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "exposed_gpio": {
+          "value": 26,
+          "unit": "count",
+          "status": "verified",
+          "scope": "board"
+        },
+        "wireless": {
+          "value": [],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "sensors": {
+          "value": [],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "interfaces": {
+          "value": [
+            "2x I2C",
+            "UART",
+            "SPI",
+            "USB",
+            "PIO"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "onboard_battery_charging": {
+          "value": true,
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "footprint": {
+          "value": [
+            21,
+            17.8
+          ],
+          "unit": "mm",
+          "status": "verified",
+          "scope": "board"
+        },
+        "pio_state_machines": {
+          "value": 8,
+          "unit": "count",
+          "status": "verified",
+          "scope": "soc"
+        }
+      },
+      "source_svg": "D:\\XIAO_test\\MFSZ26\\XIAO_Family\\Hardware\\picture\\XIAO RP2040 Plus Front.svg",
+      "editorial_notes_zh": "",
+      "applications_en": [
+        "Interactive controllers",
+        "Multi-sensor systems"
+      ],
+      "notes_en": "Expanded GPIO and onboard battery management. PIO features are shared with RP2040."
+    },
+    {
+      "id": "ra4m1",
+      "name": "XIAO RA4M1",
+      "short_name": "RA4M1",
+      "manufacturer": "Renesas",
+      "asset_key": "ra4m1_front",
+      "source_ids": [
+        "ra4m1"
+      ],
+      "feature_en": "14-bit ADC",
+      "feature_zh": "模拟信号采集",
+      "applications_zh": [
+        "测量仪表",
+        "模拟传感器采集"
+      ],
+      "specs": {
+        "processor": {
+          "value": "RA4M1 / Cortex-M4F",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "cpu_clock_max": {
+          "value": 48,
+          "unit": "MHz",
+          "status": "verified",
+          "scope": "board"
+        },
+        "sram": {
+          "value": 32,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm": {
+          "value": 256,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm_type": {
+          "value": "Flash",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "external_flash": {
+          "value": 0,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "psram": {
+          "value": 0,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "exposed_gpio": {
+          "value": 19,
+          "unit": "count",
+          "status": "verified",
+          "scope": "board"
+        },
+        "wireless": {
+          "value": [],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "sensors": {
+          "value": [],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "interfaces": {
+          "value": [
+            "2x I2C",
+            "2x UART",
+            "2x SPI",
+            "USB",
+            "CAN",
+            "12-bit DAC"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "onboard_battery_charging": {
+          "value": true,
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "footprint": {
+          "value": [
+            21,
+            17.8
+          ],
+          "unit": "mm",
+          "status": "verified",
+          "scope": "board"
+        },
+        "adc_resolution": {
+          "value": 14,
+          "unit": "bit",
+          "status": "verified",
+          "scope": "board"
+        },
+        "dac_resolution": {
+          "value": 12,
+          "unit": "bit",
+          "status": "verified",
+          "scope": "board"
+        }
+      },
+      "source_svg": "D:\\XIAO_test\\MFSZ26\\XIAO_Family\\Hardware\\picture\\XIAO RA4M1 Front.svg",
+      "editorial_notes_zh": "CAN 控制器能力与是否集成总线收发器分开表述。",
+      "applications_en": [
+        "Measurement instruments",
+        "Analog sensing"
+      ],
+      "notes_en": "14-bit ADC and 12-bit DAC. CAN controller support does not imply an onboard CAN transceiver."
+    },
+    {
+      "id": "esp32_c3",
+      "name": "XIAO ESP32-C3",
+      "short_name": "ESP32-C3",
+      "manufacturer": "Espressif",
+      "asset_key": "esp32_c3_front",
+      "source_ids": [
+        "esp32c3"
+      ],
+      "feature_en": "Wi-Fi + BLE",
+      "feature_zh": "基础无线物联网",
+      "applications_zh": [
+        "联网传感器",
+        "手机控制"
+      ],
+      "specs": {
+        "processor": {
+          "value": "ESP32-C3 / RISC-V",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "cpu_clock_max": {
+          "value": 160,
+          "unit": "MHz",
+          "status": "verified",
+          "scope": "board"
+        },
+        "sram": {
+          "value": 400,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm": {
+          "value": 0,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm_type": {
+          "value": "None",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "external_flash": {
+          "value": 4,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "psram": {
+          "value": 0,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "exposed_gpio": {
+          "value": 11,
+          "unit": "count",
+          "status": "verified",
+          "scope": "board"
+        },
+        "wireless": {
+          "value": [
+            "2.4 GHz Wi-Fi 4",
+            "Bluetooth LE"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "sensors": {
+          "value": [],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "interfaces": {
+          "value": [
+            "I2C",
+            "UART",
+            "SPI",
+            "USB Serial/JTAG"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "onboard_battery_charging": {
+          "value": true,
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "footprint": {
+          "value": [
+            21,
+            17.8
+          ],
+          "unit": "mm",
+          "status": "verified",
+          "scope": "board"
+        }
+      },
+      "source_svg": "D:\\XIAO_test\\MFSZ26\\XIAO_Family\\Hardware\\picture\\XIAO ESP32-C3 Front.svg",
+      "editorial_notes_zh": "",
+      "applications_en": [
+        "Connected sensors",
+        "Wireless controllers"
+      ],
+      "notes_en": "2.4 GHz Wi-Fi and Bluetooth LE for compact connected devices."
+    },
+    {
+      "id": "esp32_c5",
+      "name": "XIAO ESP32-C5",
+      "short_name": "ESP32-C5",
+      "manufacturer": "Espressif",
+      "asset_key": "esp32_c5_front",
+      "source_ids": [
+        "esp32c5",
+        "esp32c5_soc"
+      ],
+      "feature_en": "Dual-band Wi-Fi 6",
+      "feature_zh": "双频无线连接",
+      "applications_zh": [
+        "5 GHz 联网终端",
+        "无线数据传输"
+      ],
+      "specs": {
+        "processor": {
+          "value": "ESP32-C5 / RISC-V",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "cpu_clock_max": {
+          "value": 240,
+          "unit": "MHz",
+          "status": "verified",
+          "scope": "board"
+        },
+        "sram": {
+          "value": 384,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm": {
+          "value": 0,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm_type": {
+          "value": "None",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "external_flash": {
+          "value": 8,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "psram": {
+          "value": 8,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "exposed_gpio": {
+          "value": 11,
+          "unit": "count",
+          "status": "verified",
+          "scope": "board"
+        },
+        "wireless": {
+          "value": [
+            "2.4 / 5 GHz Wi-Fi 6",
+            "Bluetooth LE"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "sensors": {
+          "value": [],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "interfaces": {
+          "value": [
+            "I2C",
+            "UART",
+            "SPI"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "onboard_battery_charging": {
+          "value": true,
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "footprint": {
+          "value": [
+            21,
+            17.8
+          ],
+          "unit": "mm",
+          "status": "verified",
+          "scope": "board"
+        }
+      },
+      "source_svg": "D:\\XIAO_test\\MFSZ26\\XIAO_Family\\Hardware\\picture\\XIAO ESP32-C5 Front.svg",
+      "editorial_notes_zh": "片内 SRAM 采用规格所列 384 KiB；可分配堆容量由固件测量，不能等同该值。",
+      "applications_en": [
+        "Dual-band connected devices",
+        "Wireless data terminals"
+      ],
+      "notes_en": "Supports 2.4 GHz and 5 GHz Wi-Fi 6. SRAM capacity is not the same as free application heap."
+    },
+    {
+      "id": "esp32_c6",
+      "name": "XIAO ESP32-C6",
+      "short_name": "ESP32-C6",
+      "manufacturer": "Espressif",
+      "asset_key": "esp32_c6_front",
+      "source_ids": [
+        "esp32c6"
+      ],
+      "feature_en": "Wi-Fi 6 + Thread",
+      "feature_zh": "智能家居连接",
+      "applications_zh": [
+        "Matter 设备",
+        "Thread 传感器"
+      ],
+      "specs": {
+        "processor": {
+          "value": "ESP32-C6 / RISC-V HP + LP",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "cpu_clock_max": {
+          "value": 160,
+          "unit": "MHz",
+          "status": "verified",
+          "scope": "board"
+        },
+        "sram": {
+          "value": 512,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm": {
+          "value": 0,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm_type": {
+          "value": "None",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "external_flash": {
+          "value": 4,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "psram": {
+          "value": 0,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "exposed_gpio": {
+          "value": 11,
+          "unit": "count",
+          "status": "verified",
+          "scope": "board"
+        },
+        "wireless": {
+          "value": [
+            "2.4 GHz Wi-Fi 6",
+            "Bluetooth LE",
+            "Thread",
+            "Zigbee",
+            "Matter"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "sensors": {
+          "value": [],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "interfaces": {
+          "value": [
+            "I2C",
+            "UART",
+            "SPI",
+            "SDIO"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "onboard_battery_charging": {
+          "value": true,
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "footprint": {
+          "value": [
+            21,
+            17.8
+          ],
+          "unit": "mm",
+          "status": "verified",
+          "scope": "board"
+        }
+      },
+      "source_svg": "D:\\XIAO_test\\MFSZ26\\XIAO_Family\\Hardware\\picture\\XIAO ESP32-C6 Front.svg",
+      "editorial_notes_zh": "主频字段记录 HP 核；无线协议及 Matter 功能依赖相应软件栈。",
+      "applications_en": [
+        "Matter devices",
+        "Thread sensors"
+      ],
+      "notes_en": "CPU maximum refers to the high-performance core. Thread and Matter require their matching software stacks."
+    },
+    {
+      "id": "esp32_s3_plus",
+      "name": "XIAO ESP32-S3 Plus",
+      "short_name": "ESP32-S3 Plus",
+      "manufacturer": "Espressif",
+      "asset_key": "esp32_s3_plus_front",
+      "source_ids": [
+        "esp32s3"
+      ],
+      "feature_en": "16 MB Flash",
+      "feature_zh": "大容量应用与图形资源",
+      "applications_zh": [
+        "带屏交互终端",
+        "联网控制器"
+      ],
+      "specs": {
+        "processor": {
+          "value": "ESP32-S3 / Dual Xtensa LX7",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "cpu_clock_max": {
+          "value": 240,
+          "unit": "MHz",
+          "status": "verified",
+          "scope": "board"
+        },
+        "sram": {
+          "value": null,
+          "unit": "KiB",
+          "status": "pending",
+          "scope": "board"
+        },
+        "internal_nvm": {
+          "value": 0,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm_type": {
+          "value": "None",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "external_flash": {
+          "value": 16,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "psram": {
+          "value": 8,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "exposed_gpio": {
+          "value": 18,
+          "unit": "count",
+          "status": "verified",
+          "scope": "board"
+        },
+        "wireless": {
+          "value": [
+            "2.4 GHz Wi-Fi",
+            "Bluetooth LE"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "sensors": {
+          "value": [],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "interfaces": {
+          "value": [
+            "2x UART",
+            "I2C",
+            "2x SPI",
+            "I2S",
+            "USB"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "onboard_battery_charging": {
+          "value": true,
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "footprint": {
+          "value": [
+            21,
+            17.8
+          ],
+          "unit": "mm",
+          "status": "verified",
+          "scope": "board"
+        }
+      },
+      "source_svg": "D:\\XIAO_test\\MFSZ26\\XIAO_Family\\Hardware\\picture\\XIAO ESP32-S3 Plus Front.svg",
+      "editorial_notes_zh": "片内 SRAM 待与芯片资料确认；不得以 PSRAM 替代 SRAM 字段。",
+      "applications_en": [
+        "Touchscreen terminals",
+        "Connected controllers"
+      ],
+      "notes_en": "16 MB Flash and 8 MB PSRAM. Internal SRAM must be verified separately."
+    },
+    {
+      "id": "esp32_s3_sense",
+      "name": "XIAO ESP32-S3 Sense",
+      "short_name": "ESP32-S3 Sense",
+      "manufacturer": "Espressif",
+      "asset_key": "esp32_s3_sense_front",
+      "source_ids": [
+        "esp32s3"
+      ],
+      "feature_en": "Camera + Mic",
+      "feature_zh": "图像与声音采集",
+      "applications_zh": [
+        "视觉识别原型",
+        "声音识别"
+      ],
+      "specs": {
+        "processor": {
+          "value": "ESP32-S3 / Dual Xtensa LX7",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "cpu_clock_max": {
+          "value": 240,
+          "unit": "MHz",
+          "status": "verified",
+          "scope": "board"
+        },
+        "sram": {
+          "value": null,
+          "unit": "KiB",
+          "status": "pending",
+          "scope": "board"
+        },
+        "internal_nvm": {
+          "value": 0,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm_type": {
+          "value": "None",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "external_flash": {
+          "value": 8,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "psram": {
+          "value": 8,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "exposed_gpio": {
+          "value": 11,
+          "unit": "count",
+          "status": "verified",
+          "scope": "board"
+        },
+        "wireless": {
+          "value": [
+            "2.4 GHz Wi-Fi",
+            "Bluetooth LE"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "sensors": {
+          "value": [
+            "Camera on Sense expansion",
+            "Digital microphone on Sense expansion"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "interfaces": {
+          "value": [
+            "I2C",
+            "UART",
+            "SPI",
+            "I2S",
+            "USB",
+            "microSD on expansion"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "onboard_battery_charging": {
+          "value": true,
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "footprint": {
+          "value": [
+            21,
+            17.8
+          ],
+          "unit": "mm",
+          "status": "verified",
+          "scope": "board"
+        }
+      },
+      "source_svg": "D:\\XIAO_test\\MFSZ26\\XIAO_Family\\Hardware\\picture\\XIAO ESP32-S3 Sense Front.svg",
+      "editorial_notes_zh": "传感器位于 Sense 扩展板；相机为供货批次相关型号，不固定展示 OV2640 / OV3660 / OV5640 的某一个。外形字段表示核心板占板尺寸。",
+      "applications_en": [
+        "Vision prototypes",
+        "Sound recognition"
+      ],
+      "notes_en": "Camera and microphone are on the Sense expansion board. Camera model depends on the hardware batch."
+    },
+    {
+      "id": "nrf52840_sense",
+      "name": "XIAO nRF52840 Sense",
+      "short_name": "nRF52840 Sense",
+      "manufacturer": "Nordic Semiconductor",
+      "asset_key": "nrf52840_sense_front",
+      "source_ids": [
+        "nrf52840"
+      ],
+      "feature_en": "IMU + Mic",
+      "feature_zh": "运动与声音采集",
+      "applications_zh": [
+        "手势识别",
+        "声音感知穿戴设备"
+      ],
+      "specs": {
+        "processor": {
+          "value": "nRF52840 / Cortex-M4F",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "cpu_clock_max": {
+          "value": 64,
+          "unit": "MHz",
+          "status": "verified",
+          "scope": "board"
+        },
+        "sram": {
+          "value": 256,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm": {
+          "value": 1024,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm_type": {
+          "value": "Flash",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "external_flash": {
+          "value": 2,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "psram": {
+          "value": 0,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "exposed_gpio": {
+          "value": 11,
+          "unit": "count",
+          "status": "verified",
+          "scope": "board"
+        },
+        "wireless": {
+          "value": [
+            "Bluetooth LE",
+            "Bluetooth Mesh",
+            "NFC"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "sensors": {
+          "value": [
+            "6-axis IMU",
+            "PDM microphone"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "interfaces": {
+          "value": [
+            "I2C",
+            "UART",
+            "SPI",
+            "USB",
+            "NFC",
+            "SWD"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "onboard_battery_charging": {
+          "value": true,
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "footprint": {
+          "value": [
+            21,
+            17.8
+          ],
+          "unit": "mm",
+          "status": "verified",
+          "scope": "board"
+        }
+      },
+      "source_svg": "D:\\XIAO_test\\MFSZ26\\XIAO_Family\\Hardware\\picture\\XIAO nRF52840 Sense Front.svg",
+      "editorial_notes_zh": "当前版本按最新展示清单使用 Sense 普通版；不得静默替换为 Sense Plus。BLE 数字版本在来源中不一致，界面只显示 Bluetooth LE。",
+      "applications_en": [
+        "Gesture sensing",
+        "Sound-aware wearables"
+      ],
+      "notes_en": "Six-axis IMU and PDM microphone. Bluetooth LE version details require verification."
+    },
+    {
+      "id": "nrf52840_plus",
+      "name": "XIAO nRF52840 Plus",
+      "short_name": "nRF52840 Plus",
+      "manufacturer": "Nordic Semiconductor",
+      "asset_key": "nrf52840_plus_front",
+      "source_ids": [
+        "nrf52840"
+      ],
+      "feature_en": "More GPIOs",
+      "feature_zh": "蓝牙外设扩展",
+      "applications_zh": [
+        "蓝牙控制器",
+        "多传感器终端"
+      ],
+      "specs": {
+        "processor": {
+          "value": "nRF52840 / Cortex-M4F",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "cpu_clock_max": {
+          "value": 64,
+          "unit": "MHz",
+          "status": "verified",
+          "scope": "board"
+        },
+        "sram": {
+          "value": 256,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm": {
+          "value": 1024,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm_type": {
+          "value": "Flash",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "external_flash": {
+          "value": 2,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "psram": {
+          "value": 0,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "exposed_gpio": {
+          "value": null,
+          "unit": "count",
+          "status": "conflict",
+          "scope": "board",
+          "note": "官方页面 GPIO/PWM 数量存在 18 / 20 口径差异。"
+        },
+        "wireless": {
+          "value": [
+            "Bluetooth LE",
+            "Bluetooth Mesh",
+            "NFC"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "sensors": {
+          "value": [],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "interfaces": {
+          "value": [
+            "I2C",
+            "2x UART",
+            "2x SPI",
+            "I2S",
+            "USB",
+            "NFC",
+            "SWD"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "onboard_battery_charging": {
+          "value": true,
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "footprint": {
+          "value": [
+            21,
+            17.8
+          ],
+          "unit": "mm",
+          "status": "verified",
+          "scope": "board"
+        }
+      },
+      "source_svg": "D:\\XIAO_test\\MFSZ26\\XIAO_Family\\Hardware\\picture\\XIAO nRF52840 Plus Front.svg",
+      "editorial_notes_zh": "官方页面同时存在 18 与 20 的 GPIO 口径；数量待核实，不显示猜测数值。",
+      "applications_en": [
+        "Bluetooth controllers",
+        "Multi-sensor terminals"
+      ],
+      "notes_en": "Expanded interfaces. The published GPIO count uses inconsistent definitions and is not verified."
+    },
+    {
+      "id": "nrf54l15_sense",
+      "name": "XIAO nRF54L15 Sense",
+      "short_name": "nRF54L15 Sense",
+      "manufacturer": "Nordic Semiconductor",
+      "asset_key": "nrf54l15_sense_front",
+      "source_ids": [
+        "nrf54l15"
+      ],
+      "feature_en": "BLE 6 + IMU",
+      "feature_zh": "新一代低功耗感知",
+      "applications_zh": [
+        "运动传感",
+        "无线穿戴设备"
+      ],
+      "specs": {
+        "processor": {
+          "value": "nRF54L15 / Cortex-M33 + RISC-V coprocessor",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "cpu_clock_max": {
+          "value": 128,
+          "unit": "MHz",
+          "status": "verified",
+          "scope": "board"
+        },
+        "sram": {
+          "value": 256,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm": {
+          "value": 1536,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm_type": {
+          "value": "NVM",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "external_flash": {
+          "value": null,
+          "unit": "MiB",
+          "status": "pending",
+          "scope": "board"
+        },
+        "psram": {
+          "value": 0,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "exposed_gpio": {
+          "value": null,
+          "unit": "count",
+          "status": "pending",
+          "scope": "board"
+        },
+        "wireless": {
+          "value": [
+            "Bluetooth LE 6.0",
+            "Thread",
+            "Zigbee",
+            "Matter",
+            "NFC"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "sensors": {
+          "value": [
+            "6-axis IMU",
+            "PDM microphone"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "interfaces": {
+          "value": [
+            "I2C",
+            "UART",
+            "SPI",
+            "NFC"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "onboard_battery_charging": {
+          "value": true,
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "footprint": {
+          "value": [
+            21,
+            17.8
+          ],
+          "unit": "mm",
+          "status": "verified",
+          "scope": "board"
+        }
+      },
+      "source_svg": "D:\\XIAO_test\\MFSZ26\\XIAO_Family\\Hardware\\picture\\XIAO nRF54L15 Sense Front.svg",
+      "editorial_notes_zh": "内部存储采用 NVM 命名；协处理器与主处理器分开描述。",
+      "applications_en": [
+        "Motion sensing",
+        "Wireless wearables"
+      ],
+      "notes_en": "Cortex-M33 with a RISC-V coprocessor. Internal nonvolatile storage is listed as NVM."
+    },
+    {
+      "id": "nrf54lm20a_sense",
+      "name": "XIAO nRF54LM20A Sense",
+      "short_name": "nRF54LM20A Sense",
+      "manufacturer": "Nordic Semiconductor",
+      "asset_key": "nrf54lm20a_sense_front",
+      "source_ids": [
+        "lm20a"
+      ],
+      "feature_en": "8 MB Ext. Flash",
+      "feature_zh": "传感数据与资源存储",
+      "applications_zh": [
+        "数据记录",
+        "无线智能感知"
+      ],
+      "specs": {
+        "processor": {
+          "value": "nRF54LM20A / Cortex-M33 + RISC-V coprocessor",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "cpu_clock_max": {
+          "value": 128,
+          "unit": "MHz",
+          "status": "verified",
+          "scope": "board"
+        },
+        "sram": {
+          "value": 512,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm": {
+          "value": 2048,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "internal_nvm_type": {
+          "value": "NVM",
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "external_flash": {
+          "value": 8,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "psram": {
+          "value": 0,
+          "unit": "MiB",
+          "status": "verified",
+          "scope": "board"
+        },
+        "exposed_gpio": {
+          "value": 28,
+          "unit": "count",
+          "status": "verified",
+          "scope": "board"
+        },
+        "wireless": {
+          "value": [
+            "Bluetooth LE 6.0",
+            "Thread",
+            "Zigbee",
+            "Matter",
+            "NFC"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "sensors": {
+          "value": [
+            "6-axis IMU",
+            "PDM microphone"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "interfaces": {
+          "value": [
+            "I2C",
+            "UART",
+            "SPI",
+            "NFC"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "onboard_battery_charging": {
+          "value": true,
+          "unit": null,
+          "status": "verified",
+          "scope": "board"
+        },
+        "footprint": {
+          "value": [
+            21,
+            17.8
+          ],
+          "unit": "mm",
+          "status": "verified",
+          "scope": "board"
+        }
+      },
+      "source_svg": "D:\\XIAO_test\\MFSZ26\\XIAO_Family\\Hardware\\picture\\XIAO nRF54L15LM20A Front.svg",
+      "editorial_notes_zh": "源文件名称含 nRF54L15LM20A，按现有素材作为 LM20A 图片；需与实物复核。nPM1300 电源管理。",
+      "applications_en": [
+        "Sensor data logging",
+        "Connected sensing"
+      ],
+      "notes_en": "Includes external Flash and nPM1300 power management. The supplied image filename uses a legacy naming convention."
+    },
+    {
+      "id": "nrf54lm20b_sense",
+      "name": "XIAO nRF54LM20B Sense",
+      "short_name": "nRF54LM20B Sense",
+      "manufacturer": "Nordic Semiconductor",
+      "asset_key": "nrf54lm20b_sense_front",
+      "source_ids": [
+        "lm20b_soc"
+      ],
+      "feature_en": "Axon NPU",
+      "feature_zh": "本地 AI 运算加速",
+      "applications_zh": [
+        "动作模型推理",
+        "声音模型推理",
+        "异常识别"
+      ],
+      "specs": {
+        "processor": {
+          "value": "nRF54LM20B / Cortex-M33 + RISC-V coprocessor",
+          "unit": null,
+          "status": "verified",
+          "scope": "soc"
+        },
+        "cpu_clock_max": {
+          "value": 128,
+          "unit": "MHz",
+          "status": "verified",
+          "scope": "soc"
+        },
+        "sram": {
+          "value": 512,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "soc"
+        },
+        "internal_nvm": {
+          "value": 2048,
+          "unit": "KiB",
+          "status": "verified",
+          "scope": "soc"
+        },
+        "internal_nvm_type": {
+          "value": "NVM",
+          "unit": null,
+          "status": "verified",
+          "scope": "soc"
+        },
+        "external_flash": {
+          "value": null,
+          "unit": "MiB",
+          "status": "pending",
+          "scope": "board"
+        },
+        "psram": {
+          "value": null,
+          "unit": "MiB",
+          "status": "pending",
+          "scope": "board"
+        },
+        "exposed_gpio": {
+          "value": null,
+          "unit": "count",
+          "status": "pending",
+          "scope": "board"
+        },
+        "wireless": {
+          "value": [
+            "Bluetooth LE",
+            "Thread",
+            "Zigbee",
+            "Matter",
+            "NFC"
+          ],
+          "unit": null,
+          "status": "verified",
+          "scope": "soc"
+        },
+        "sensors": {
+          "value": null,
+          "unit": null,
+          "status": "pending",
+          "scope": "board"
+        },
+        "interfaces": {
+          "value": null,
+          "unit": null,
+          "status": "pending",
+          "scope": "board"
+        },
+        "onboard_battery_charging": {
+          "value": null,
+          "unit": null,
+          "status": "pending",
+          "scope": "board"
+        },
+        "footprint": {
+          "value": null,
+          "unit": "mm",
+          "status": "pending",
+          "scope": "board",
+          "note": "不能由占位图片推断实物机械尺寸。"
+        },
+        "npu": {
+          "value": "Axon NPU",
+          "unit": null,
+          "status": "verified",
+          "scope": "soc"
+        }
+      },
+      "source_svg": "D:\\XIAO_test\\MFSZ26\\XIAO_Family\\Hardware\\picture\\XIAO nRF54L15LM20A Front.svg",
+      "editorial_notes_zh": "暂用 LM20A 图像占位；身份、图片资源键、参数记录均独立。已核实值仅为 SoC 能力；XIAO 板载传感器、存储和引出接口待独立资料核实。",
+      "applications_en": [
+        "Motion inference",
+        "Sound inference",
+        "Anomaly detection"
+      ],
+      "notes_en": "Reference image: LM20A. Confirmed values describe the LM20B SoC. Board-level memory, sensors and interfaces are not verified."
+    }
+  ],
+  "runtime_fields": [
+    "id",
+    "name",
+    "short_name",
+    "manufacturer",
+    "asset_key",
+    "feature_en",
+    "applications_en",
+    "notes_en",
+    "specs"
+  ],
+  "editorial_fields_excluded_from_firmware": [
+    "feature_zh",
+    "applications_zh",
+    "editorial_notes_zh",
+    "specs.*.note",
+    "source_svg",
+    "source_ids",
+    "sources"
+  ]
+}

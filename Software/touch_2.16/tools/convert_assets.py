@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""把交接包中的产品图片转换为固件可直接使用的 RGB565A8 裸数据。
+"""将 resources 中的产品 PNG 转换为固件使用的 RGB565A8 数据。
 
 产物（main/assets/img/hero_<asset_key>.bin、thumb_<asset_key>.bin）由
-main/CMakeLists.txt 通过 EMBED_FILES 嵌入固件，运行期零解码、零堆占用。
+components/xf_assets/CMakeLists.txt 通过 target_add_binary_data 链接到固件，
+运行时直接读取像素数据，无需图片解码。
 
 像素格式与 LVGL 9 的 LV_COLOR_FORMAT_RGB565A8 完全一致：
     [w*h 个 uint16 little-endian RGB565] + [w*h 个 uint8 alpha]
@@ -126,7 +127,7 @@ def convert(pkg_root: str, manifest_path: str, out_dir: str, crop: bool) -> dict
 
 def main() -> None:
     here = os.path.dirname(os.path.abspath(__file__))
-    default_pkg = r"C:\Users\seeed\Documents\ChatGPT\MFSZ 2026\屏幕交互设计"
+    default_pkg = os.path.normpath(os.path.join(here, "..", "resources"))
     ap = argparse.ArgumentParser(description="Convert handoff PNGs to LVGL RGB565A8 blobs")
     ap.add_argument("--package", default=default_pkg, help="交接包根目录")
     ap.add_argument("--manifest", default=None)

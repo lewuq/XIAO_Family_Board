@@ -6,7 +6,7 @@
  * converted to an RGB565A8 LVGL image descriptor (no decoder needed at run
  * time, no heap allocation).
  *
- * Source SVG      : D:/Users/seeed/Desktop/MFSZ26/Seeed New Logo 2022/彩色Logo.svg
+ * Source SVG      : assets/brand/seeed-logo-original.svg
  * Source SVG SHA  : 1e52a379b957c5a2141bb1331ca978a1f8f0b7a4fcae0e34396f0cc8b28b8473
  * Source PNG SHA  : 88a9d1a09df78e59fa4d53c04ff760ac89d500d0d6d5906361c915856b63b4cf
  * Ink remap       : #88B928 -> #8FC31F, #003948 -> #004966 (UI primary colours)

@@ -134,7 +134,7 @@ def verify_charset(charset: list[str], sources: list[str]) -> None:
 def main() -> None:
     here = os.path.dirname(os.path.abspath(__file__))
     project = os.path.normpath(os.path.join(here, ".."))
-    default_catalog = r"C:\Users\seeed\Documents\ChatGPT\MFSZ 2026\屏幕交互设计\product_catalog.json"
+    default_catalog = os.path.join(project, "resources", "product_catalog.json")
 
     ap = argparse.ArgumentParser(description="Generate subset CJK LVGL fonts")
     ap.add_argument("--src", default=os.path.join(project, "main"), help="扫描字符的源码目录")

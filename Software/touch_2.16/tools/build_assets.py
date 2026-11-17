@@ -18,7 +18,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PROJECT = os.path.normpath(os.path.join(HERE, ".."))
-DEFAULT_PACKAGE = r"C:\Users\seeed\Documents\ChatGPT\MFSZ 2026\屏幕交互设计"
+DEFAULT_PACKAGE = os.path.join(PROJECT, "resources")
 
 
 def run(script: str, *args: str) -> None:

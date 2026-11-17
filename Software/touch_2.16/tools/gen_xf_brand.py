@@ -32,7 +32,7 @@ from PIL import Image
 HERE = os.path.dirname(os.path.abspath(__file__))
 PROJECT = os.path.normpath(os.path.join(HERE, ".."))
 OUT_DIR = os.path.join(PROJECT, "components", "xf_assets", "generated")
-DEFAULT_PACKAGE = r"C:\Users\seeed\Documents\ChatGPT\MFSZ 2026\屏幕交互设计"
+DEFAULT_PACKAGE = os.path.join(PROJECT, "resources")
 
 # Header logo box from design note 6.1: 480 x 64 bar, logo within 240 x 36.
 BOX_W = 240
@@ -215,7 +215,7 @@ const lv_image_dsc_t xf_brand_logo = {
     .data = xf_brand_logo_map,
 };
 """ % {
-            "svg": manifest["source_svg_absolute"],
+            "svg": manifest.get("source_svg") or manifest["source_svg_absolute"],
             "svg_sha": manifest["source_sha256"],
             "png_sha": png_sha,
             "width": target[0],

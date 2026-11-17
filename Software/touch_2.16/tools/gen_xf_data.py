@@ -29,7 +29,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 PROJECT = os.path.normpath(os.path.join(HERE, ".."))
 OUT_DIR = os.path.join(PROJECT, "components", "xf_data", "generated")
-DEFAULT_PACKAGE = r"C:\Users\seeed\Documents\ChatGPT\MFSZ 2026\屏幕交互设计"
+DEFAULT_PACKAGE = os.path.join(PROJECT, "resources")
 
 # Display order of the spec rows. Mirrors design note section 9.2 and the
 # section list of section 6.4; the message key is resolved by xf_ui.

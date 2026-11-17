@@ -521,7 +521,7 @@ SPEC_INDEX = {key: idx for idx, (key, *_rest) in enumerate(FIELD_DEFS)}
 
 def main() -> None:
     here = os.path.dirname(os.path.abspath(__file__))
-    default_pkg = r"C:\Users\seeed\Documents\ChatGPT\MFSZ 2026\屏幕交互设计"
+    default_pkg = os.path.normpath(os.path.join(here, "..", "resources"))
     ap = argparse.ArgumentParser(description="Generate firmware product catalog from handoff JSON")
     ap.add_argument("--catalog", default=os.path.join(default_pkg, "product_catalog.json"))
     ap.add_argument("--manifest", default=os.path.join(default_pkg, "asset_manifest.json"))
