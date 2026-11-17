@@ -1,0 +1,8 @@
+# XIAO ESP32-S3 Plus: 16 MiB Flash / 8 MiB PSRAM
+# 18 款产品主图 + 缩略图 + 中文字体在编译期打包进 factory 应用，
+# 因此应用分区需要远大于默认 1 MiB（详见 docs/asset_pipeline.md）。
+# Name,     Type, SubType,  Offset,    Size,       Flags
+nvs,        data, nvs,      0x9000,    0x6000,
+phy_init,   data, phy,      0xf000,    0x1000,
+factory,    app,  factory,  0x10000,   0xA00000,
+storage,    data, fat,      ,          0x200000,

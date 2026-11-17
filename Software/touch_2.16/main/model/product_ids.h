@@ -1,0 +1,64 @@
+/*
+ * 自动生成文件 —— 请勿手工编辑。
+ * 由 tools/generate_catalog.py 依据交接包数据生成：
+ *   product_catalog.json
+ *   asset_manifest.json
+ * 重新生成: python tools/build_assets.py
+ */
+
+#pragma once
+
+/* 稳定业务主键：编号即默认轮播顺序，不得重排已有项。 */
+typedef enum {
+    PRODUCT_SAMD21 = 0,
+    PRODUCT_SAMD21_PLUS = 1,
+    PRODUCT_STM32C5 = 2,
+    PRODUCT_MG24_SENSE = 3,
+    PRODUCT_RP2350 = 4,
+    PRODUCT_RP2040 = 5,
+    PRODUCT_RP2040_PLUS = 6,
+    PRODUCT_RA4M1 = 7,
+    PRODUCT_ESP32_C3 = 8,
+    PRODUCT_ESP32_C5 = 9,
+    PRODUCT_ESP32_C6 = 10,
+    PRODUCT_ESP32_S3_PLUS = 11,
+    PRODUCT_ESP32_S3_SENSE = 12,
+    PRODUCT_NRF52840_SENSE = 13,
+    PRODUCT_NRF52840_PLUS = 14,
+    PRODUCT_NRF54L15_SENSE = 15,
+    PRODUCT_NRF54LM20A_SENSE = 16,
+    PRODUCT_NRF54LM20B_SENSE = 17,
+    PRODUCT_COUNT = 18,
+    PRODUCT_ID_INVALID = 0xFFFF,
+} product_id_t;
+
+/* 图片资源键：与 product_id 一一对应，可独立替换。 */
+typedef enum {
+    ASSET_SAMD21_FRONT = 0,
+    ASSET_SAMD21_PLUS_FRONT = 1,
+    ASSET_STM32C5_FRONT = 2,
+    ASSET_MG24_SENSE_FRONT = 3,
+    ASSET_RP2350_FRONT = 4,
+    ASSET_RP2040_FRONT = 5,
+    ASSET_RP2040_PLUS_FRONT = 6,
+    ASSET_RA4M1_FRONT = 7,
+    ASSET_ESP32_C3_FRONT = 8,
+    ASSET_ESP32_C5_FRONT = 9,
+    ASSET_ESP32_C6_FRONT = 10,
+    ASSET_ESP32_S3_PLUS_FRONT = 11,
+    ASSET_ESP32_S3_SENSE_FRONT = 12,
+    ASSET_NRF52840_SENSE_FRONT = 13,
+    ASSET_NRF52840_PLUS_FRONT = 14,
+    ASSET_NRF54L15_SENSE_FRONT = 15,
+    ASSET_NRF54LM20A_SENSE_FRONT = 16,
+    ASSET_NRF54LM20B_SENSE_FRONT = 17,
+    ASSET_COUNT = 18,
+} asset_id_t;
+
+#define PRODUCT_MANUFACTURER_COUNT 7
+#define DETAIL_GROUP_COUNT 5
+#define COMPARE_CATEGORY_COUNT 3
+#define SPEC_FIELD_COUNT 18
+
+/* 轮播顺序 -> product_id 查表（即 0..PRODUCT_COUNT-1） */
+#define PRODUCT_AUTOPLAY_COUNT 18

@@ -1,0 +1,14 @@
+## 依赖固定版本：禁止使用无边界的 latest / 通配符（设计说明 10.1）
+## 版本号变更必须同步更新 docs/bringup_record.md 与 dependencies.lock。
+dependencies:
+  idf: ">=5.4"
+  ## UI 框架：LVGL 9.4（设计说明以 9.4 API 为参考，固定补丁版本）
+  lvgl/lvgl:
+    version: "9.4.0"
+    override_path: "../managed_components/lvgl__lvgl"
+  ## LVGL <-> ESP-IDF 适配层（显示 flush / 触摸输入 / 互斥锁）
+  espressif/esp_lvgl_port: "2.9.0"
+  ## 显示驱动：CO5300，QSPI 4 线
+  espressif/esp_lcd_co5300: "2.2.0"
+  ## 触摸驱动：CST9220（I2C）
+  espressif/esp_lcd_touch_cst9220: "0.1.1"

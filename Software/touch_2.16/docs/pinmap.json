@@ -1,0 +1,18 @@
+﻿{
+  "platform": "esp32",
+  "variant": "esp32s3",
+  "module": "WROOM",
+  "wifi_enabled": false,
+  "pins": [
+    {"gpio": 43, "function": "QSPI_CS",   "protocol_bus": "spi",  "device": "CO5300", "direction": "output", "pull": "none"},
+    {"gpio": 44, "function": "QSPI_SCK",  "protocol_bus": "spi",  "device": "CO5300", "direction": "output", "pull": "none", "speed_hz": 40000000},
+    {"gpio": 42, "function": "QSPI_D0",   "protocol_bus": "spi",  "device": "CO5300", "direction": "inout",  "pull": "none", "speed_hz": 40000000},
+    {"gpio": 10, "function": "QSPI_D1",   "protocol_bus": "spi",  "device": "CO5300", "direction": "inout",  "pull": "none", "speed_hz": 40000000},
+    {"gpio": 12, "function": "QSPI_D2",   "protocol_bus": "spi",  "device": "CO5300", "direction": "inout",  "pull": "none", "speed_hz": 40000000},
+    {"gpio": 13, "function": "QSPI_D3",   "protocol_bus": "spi",  "device": "CO5300", "direction": "inout",  "pull": "none", "speed_hz": 40000000},
+    {"gpio": 5,  "function": "I2C_SDA",   "protocol_bus": "i2c",  "device": "CST9220+PCA9535", "direction": "inout", "pull": "external_up", "speed_hz": 400000},
+    {"gpio": 6,  "function": "I2C_SCL",   "protocol_bus": "i2c",  "device": "CST9220+PCA9535", "direction": "inout", "pull": "external_up", "speed_hz": 400000},
+    {"gpio": 3,  "function": "TP_INT",    "protocol_bus": "gpio", "device": "CST9220", "direction": "input", "pull": "none"},
+    {"gpio": 4,  "function": "IOEXP_INT", "protocol_bus": "gpio", "device": "PCA9535", "direction": "input", "pull": "none"}
+  ]
+}

@@ -1,0 +1,41 @@
+# ESP-IDF, CMake and PlatformIO build output
+build/
+build-*/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+compile_commands.json
+.pio/
+sdkconfig.old
+
+# Installed tools and caches
+node_modules/
+__pycache__/
+*.py[cod]
+.cache/
+.pytest_cache/
+.mypy_cache/
+
+# Local editor and operating-system files
+.vscode/
+.idea/
+.vs/
+.DS_Store
+Thumbs.db
+
+# Compiler output and temporary files
+*.o
+*.obj
+*.d
+*.elf
+*.map
+*.exe
+*.pdb
+*.ilk
+*.gcda
+*.gcno
+*.log
+*.tmp
+
+# Do not ignore *.bin or *.a globally: image payloads and vendored
+# third-party libraries are build inputs, not disposable build output.

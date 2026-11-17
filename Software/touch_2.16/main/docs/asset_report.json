@@ -1,0 +1,878 @@
+{
+  "assets": [
+    {
+      "asset_key": "samd21_front",
+      "product_id": "samd21",
+      "is_placeholder": false,
+      "placeholder_product_id": null,
+      "hero": {
+        "src": "assets/hero/samd21.png",
+        "png_sha256": "881780051e32dc2b30077e789d7aad5f135c89fd91d552041ea49f5ab95aa3ad",
+        "bin": "hero_samd21_front.bin",
+        "bin_bytes": 187200,
+        "source_size": [
+          240,
+          260
+        ],
+        "content_bbox": [
+          16,
+          0,
+          224,
+          260
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          240,
+          260
+        ]
+      },
+      "thumb": {
+        "src": "assets/thumb/samd21.png",
+        "png_sha256": "973c0fd34b301e5f14cf3015710d8ad03a3fef77640fde77bfaed0f6cf885de0",
+        "bin": "thumb_samd21_front.bin",
+        "bin_bytes": 29952,
+        "source_size": [
+          96,
+          104
+        ],
+        "content_bbox": [
+          6,
+          0,
+          89,
+          104
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          96,
+          104
+        ]
+      }
+    },
+    {
+      "asset_key": "samd21_plus_front",
+      "product_id": "samd21_plus",
+      "is_placeholder": false,
+      "placeholder_product_id": null,
+      "hero": {
+        "src": "assets/hero/samd21_plus.png",
+        "png_sha256": "0ef10eb65c383a27a4dbf88c28ea1e3e3ce2e109d3561c349dff5e7b742f8aa5",
+        "bin": "hero_samd21_plus_front.bin",
+        "bin_bytes": 187200,
+        "source_size": [
+          240,
+          260
+        ],
+        "content_bbox": [
+          26,
+          0,
+          213,
+          260
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          240,
+          260
+        ]
+      },
+      "thumb": {
+        "src": "assets/thumb/samd21_plus.png",
+        "png_sha256": "7fe68176f20f9b6615aabba844128514b27ef5f1a66b9b2c67ac72bd2322e62e",
+        "bin": "thumb_samd21_plus_front.bin",
+        "bin_bytes": 29952,
+        "source_size": [
+          96,
+          104
+        ],
+        "content_bbox": [
+          10,
+          0,
+          85,
+          104
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          96,
+          104
+        ]
+      }
+    },
+    {
+      "asset_key": "stm32c5_front",
+      "product_id": "stm32c5",
+      "is_placeholder": false,
+      "placeholder_product_id": null,
+      "hero": {
+        "src": "assets/hero/stm32c5.png",
+        "png_sha256": "6810c444cac7d456533b69f39606522051a81e9f8ed3b9b144ee295fa583feec",
+        "bin": "hero_stm32c5_front.bin",
+        "bin_bytes": 187200,
+        "source_size": [
+          240,
+          260
+        ],
+        "content_bbox": [
+          18,
+          0,
+          221,
+          260
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          240,
+          260
+        ]
+      },
+      "thumb": {
+        "src": "assets/thumb/stm32c5.png",
+        "png_sha256": "3cd6d709a7073810cbebcf5098a765cd56bd835c728ce4e8c6bc1f1a8d7d5413",
+        "bin": "thumb_stm32c5_front.bin",
+        "bin_bytes": 29952,
+        "source_size": [
+          96,
+          104
+        ],
+        "content_bbox": [
+          7,
+          0,
+          88,
+          104
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          96,
+          104
+        ]
+      }
+    },
+    {
+      "asset_key": "mg24_sense_front",
+      "product_id": "mg24_sense",
+      "is_placeholder": false,
+      "placeholder_product_id": null,
+      "hero": {
+        "src": "assets/hero/mg24_sense.png",
+        "png_sha256": "f0196464993d3cb1af2d49983bdd2a4dc5896a80e42cfeaf39b9c5e17ab3f561",
+        "bin": "hero_mg24_sense_front.bin",
+        "bin_bytes": 187200,
+        "source_size": [
+          240,
+          260
+        ],
+        "content_bbox": [
+          21,
+          0,
+          218,
+          260
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          240,
+          260
+        ]
+      },
+      "thumb": {
+        "src": "assets/thumb/mg24_sense.png",
+        "png_sha256": "a2fb5cf98c4389289342ba848f3882b1e29b6461136de1df0c5f758c1e612a39",
+        "bin": "thumb_mg24_sense_front.bin",
+        "bin_bytes": 29952,
+        "source_size": [
+          96,
+          104
+        ],
+        "content_bbox": [
+          8,
+          0,
+          87,
+          104
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          96,
+          104
+        ]
+      }
+    },
+    {
+      "asset_key": "rp2350_front",
+      "product_id": "rp2350",
+      "is_placeholder": false,
+      "placeholder_product_id": null,
+      "hero": {
+        "src": "assets/hero/rp2350.png",
+        "png_sha256": "4e8fae0f0fd4e4e6087a3ec4e115096a2088e7f400d80d4d460efd698d0061e6",
+        "bin": "hero_rp2350_front.bin",
+        "bin_bytes": 187200,
+        "source_size": [
+          240,
+          260
+        ],
+        "content_bbox": [
+          19,
+          0,
+          221,
+          260
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          240,
+          260
+        ]
+      },
+      "thumb": {
+        "src": "assets/thumb/rp2350.png",
+        "png_sha256": "7a51d3088bc9d2f311e53fe76e111d888401bb731b0388697fdf59601fd97ab5",
+        "bin": "thumb_rp2350_front.bin",
+        "bin_bytes": 29952,
+        "source_size": [
+          96,
+          104
+        ],
+        "content_bbox": [
+          7,
+          0,
+          88,
+          104
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          96,
+          104
+        ]
+      }
+    },
+    {
+      "asset_key": "rp2040_front",
+      "product_id": "rp2040",
+      "is_placeholder": false,
+      "placeholder_product_id": null,
+      "hero": {
+        "src": "assets/hero/rp2040.png",
+        "png_sha256": "f96377229c5c33725a8c0aaa7c39ce20d57dd705c4c4d179169dc192f3f62d30",
+        "bin": "hero_rp2040_front.bin",
+        "bin_bytes": 187200,
+        "source_size": [
+          240,
+          260
+        ],
+        "content_bbox": [
+          18,
+          0,
+          222,
+          260
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          240,
+          260
+        ]
+      },
+      "thumb": {
+        "src": "assets/thumb/rp2040.png",
+        "png_sha256": "b0052fec3bda1b0cfcd0a63c8df216aaafa2156ff42271946e240d7c369dadd2",
+        "bin": "thumb_rp2040_front.bin",
+        "bin_bytes": 29952,
+        "source_size": [
+          96,
+          104
+        ],
+        "content_bbox": [
+          7,
+          0,
+          88,
+          104
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          96,
+          104
+        ]
+      }
+    },
+    {
+      "asset_key": "rp2040_plus_front",
+      "product_id": "rp2040_plus",
+      "is_placeholder": false,
+      "placeholder_product_id": null,
+      "hero": {
+        "src": "assets/hero/rp2040_plus.png",
+        "png_sha256": "5ddd7119a3a4c72c6855f26c2224b60710e83959179abf9d342104369b7a3d82",
+        "bin": "hero_rp2040_plus_front.bin",
+        "bin_bytes": 187200,
+        "source_size": [
+          240,
+          260
+        ],
+        "content_bbox": [
+          23,
+          0,
+          216,
+          260
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          240,
+          260
+        ]
+      },
+      "thumb": {
+        "src": "assets/thumb/rp2040_plus.png",
+        "png_sha256": "b6c23f1759e666df31f03a19b5112af2325924b656e70ba6388d9a33a0711b86",
+        "bin": "thumb_rp2040_plus_front.bin",
+        "bin_bytes": 29952,
+        "source_size": [
+          96,
+          104
+        ],
+        "content_bbox": [
+          9,
+          0,
+          86,
+          104
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          96,
+          104
+        ]
+      }
+    },
+    {
+      "asset_key": "ra4m1_front",
+      "product_id": "ra4m1",
+      "is_placeholder": false,
+      "placeholder_product_id": null,
+      "hero": {
+        "src": "assets/hero/ra4m1.png",
+        "png_sha256": "4c908cf9f8166154abce182294a6627ee41229534c7d37e9676442c061b753e5",
+        "bin": "hero_ra4m1_front.bin",
+        "bin_bytes": 187200,
+        "source_size": [
+          240,
+          260
+        ],
+        "content_bbox": [
+          20,
+          0,
+          219,
+          260
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          240,
+          260
+        ]
+      },
+      "thumb": {
+        "src": "assets/thumb/ra4m1.png",
+        "png_sha256": "4f23aa5b89d80bdd21990a2cd3d3ee597b0296ae57b3acd38105cb5ecdc4ec8a",
+        "bin": "thumb_ra4m1_front.bin",
+        "bin_bytes": 29952,
+        "source_size": [
+          96,
+          104
+        ],
+        "content_bbox": [
+          8,
+          0,
+          88,
+          104
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          96,
+          104
+        ]
+      }
+    },
+    {
+      "asset_key": "esp32_c3_front",
+      "product_id": "esp32_c3",
+      "is_placeholder": false,
+      "placeholder_product_id": null,
+      "hero": {
+        "src": "assets/hero/esp32_c3.png",
+        "png_sha256": "9a64b2b4a63af9c0e7e5e81b61c903bfce68ce5a1317c79ebdfd63655ea5d33a",
+        "bin": "hero_esp32_c3_front.bin",
+        "bin_bytes": 187200,
+        "source_size": [
+          240,
+          260
+        ],
+        "content_bbox": [
+          19,
+          0,
+          220,
+          260
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          240,
+          260
+        ]
+      },
+      "thumb": {
+        "src": "assets/thumb/esp32_c3.png",
+        "png_sha256": "e89f1d3d941e5021eda11b3fc179e40a554b07c5f41139db4f6e4a143aeedc83",
+        "bin": "thumb_esp32_c3_front.bin",
+        "bin_bytes": 29952,
+        "source_size": [
+          96,
+          104
+        ],
+        "content_bbox": [
+          8,
+          0,
+          88,
+          104
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          96,
+          104
+        ]
+      }
+    },
+    {
+      "asset_key": "esp32_c5_front",
+      "product_id": "esp32_c5",
+      "is_placeholder": false,
+      "placeholder_product_id": null,
+      "hero": {
+        "src": "assets/hero/esp32_c5.png",
+        "png_sha256": "e9d7c125a5eac53e444ea8fd29a400e2fa0a39cba64b860da474d8bd697bc6cb",
+        "bin": "hero_esp32_c5_front.bin",
+        "bin_bytes": 187200,
+        "source_size": [
+          240,
+          260
+        ],
+        "content_bbox": [
+          22,
+          0,
+          218,
+          260
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          240,
+          260
+        ]
+      },
+      "thumb": {
+        "src": "assets/thumb/esp32_c5.png",
+        "png_sha256": "5e574e66fcca0b69bca950959eb51abbd8a85c29dfa85302e1e28be6870031ee",
+        "bin": "thumb_esp32_c5_front.bin",
+        "bin_bytes": 29952,
+        "source_size": [
+          96,
+          104
+        ],
+        "content_bbox": [
+          9,
+          0,
+          87,
+          104
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          96,
+          104
+        ]
+      }
+    },
+    {
+      "asset_key": "esp32_c6_front",
+      "product_id": "esp32_c6",
+      "is_placeholder": false,
+      "placeholder_product_id": null,
+      "hero": {
+        "src": "assets/hero/esp32_c6.png",
+        "png_sha256": "3dc82bbac2729c64080c3cd91ac901872a19dc75c15a72d33e31467987044981",
+        "bin": "hero_esp32_c6_front.bin",
+        "bin_bytes": 187200,
+        "source_size": [
+          240,
+          260
+        ],
+        "content_bbox": [
+          19,
+          0,
+          221,
+          260
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          240,
+          260
+        ]
+      },
+      "thumb": {
+        "src": "assets/thumb/esp32_c6.png",
+        "png_sha256": "8118258a54c85a408c88ba47d3da204b7856d9fc3898d6cb3f8edd0eef88977a",
+        "bin": "thumb_esp32_c6_front.bin",
+        "bin_bytes": 29952,
+        "source_size": [
+          96,
+          104
+        ],
+        "content_bbox": [
+          7,
+          0,
+          88,
+          104
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          96,
+          104
+        ]
+      }
+    },
+    {
+      "asset_key": "esp32_s3_plus_front",
+      "product_id": "esp32_s3_plus",
+      "is_placeholder": false,
+      "placeholder_product_id": null,
+      "hero": {
+        "src": "assets/hero/esp32_s3_plus.png",
+        "png_sha256": "adb2f1e549bb6c926dbdb77ff84bb0c0c5781bdb5628f8ba49fec7b7eb4259f4",
+        "bin": "hero_esp32_s3_plus_front.bin",
+        "bin_bytes": 187200,
+        "source_size": [
+          240,
+          260
+        ],
+        "content_bbox": [
+          18,
+          0,
+          221,
+          260
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          240,
+          260
+        ]
+      },
+      "thumb": {
+        "src": "assets/thumb/esp32_s3_plus.png",
+        "png_sha256": "31f2cb959dc7b808e564a3a8ee28922d653cc26b6f098a8b0d3c8b9132f23e93",
+        "bin": "thumb_esp32_s3_plus_front.bin",
+        "bin_bytes": 29952,
+        "source_size": [
+          96,
+          104
+        ],
+        "content_bbox": [
+          7,
+          0,
+          88,
+          104
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          96,
+          104
+        ]
+      }
+    },
+    {
+      "asset_key": "esp32_s3_sense_front",
+      "product_id": "esp32_s3_sense",
+      "is_placeholder": false,
+      "placeholder_product_id": null,
+      "hero": {
+        "src": "assets/hero/esp32_s3_sense.png",
+        "png_sha256": "68f89f671e4a6aba5c3770291d5fdd311294ada38a27dc07da6c8db28d0667f4",
+        "bin": "hero_esp32_s3_sense_front.bin",
+        "bin_bytes": 187200,
+        "source_size": [
+          240,
+          260
+        ],
+        "content_bbox": [
+          13,
+          0,
+          227,
+          260
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          240,
+          260
+        ]
+      },
+      "thumb": {
+        "src": "assets/thumb/esp32_s3_sense.png",
+        "png_sha256": "6a7b01ca0cd4f0929e5119b27c7250717ba9f9191c588709791cf8775c7b63a7",
+        "bin": "thumb_esp32_s3_sense_front.bin",
+        "bin_bytes": 29952,
+        "source_size": [
+          96,
+          104
+        ],
+        "content_bbox": [
+          5,
+          0,
+          90,
+          104
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          96,
+          104
+        ]
+      }
+    },
+    {
+      "asset_key": "nrf52840_sense_front",
+      "product_id": "nrf52840_sense",
+      "is_placeholder": false,
+      "placeholder_product_id": null,
+      "hero": {
+        "src": "assets/hero/nrf52840_sense.png",
+        "png_sha256": "b40fdc9a734f41010941656a7a694892fb686de5ba2e2f5366d59328042dd4bf",
+        "bin": "hero_nrf52840_sense_front.bin",
+        "bin_bytes": 187200,
+        "source_size": [
+          240,
+          260
+        ],
+        "content_bbox": [
+          19,
+          0,
+          221,
+          260
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          240,
+          260
+        ]
+      },
+      "thumb": {
+        "src": "assets/thumb/nrf52840_sense.png",
+        "png_sha256": "c9f0ebeecd7e84efdeb2dfb16ac5bf7c11702bd4ab366f04962e907bf7dbefbc",
+        "bin": "thumb_nrf52840_sense_front.bin",
+        "bin_bytes": 29952,
+        "source_size": [
+          96,
+          104
+        ],
+        "content_bbox": [
+          7,
+          0,
+          88,
+          104
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          96,
+          104
+        ]
+      }
+    },
+    {
+      "asset_key": "nrf52840_plus_front",
+      "product_id": "nrf52840_plus",
+      "is_placeholder": false,
+      "placeholder_product_id": null,
+      "hero": {
+        "src": "assets/hero/nrf52840_plus.png",
+        "png_sha256": "a428db604ca4f795049fb705763d6e2e9a95d36aed2b73ec50c55f898a170015",
+        "bin": "hero_nrf52840_plus_front.bin",
+        "bin_bytes": 187200,
+        "source_size": [
+          240,
+          260
+        ],
+        "content_bbox": [
+          19,
+          0,
+          221,
+          260
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          240,
+          260
+        ]
+      },
+      "thumb": {
+        "src": "assets/thumb/nrf52840_plus.png",
+        "png_sha256": "2b11f253a1161381a42c771c4879af595bd51a563016b2a4b2c555d48b7a0215",
+        "bin": "thumb_nrf52840_plus_front.bin",
+        "bin_bytes": 29952,
+        "source_size": [
+          96,
+          104
+        ],
+        "content_bbox": [
+          7,
+          0,
+          88,
+          104
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          96,
+          104
+        ]
+      }
+    },
+    {
+      "asset_key": "nrf54l15_sense_front",
+      "product_id": "nrf54l15_sense",
+      "is_placeholder": false,
+      "placeholder_product_id": null,
+      "hero": {
+        "src": "assets/hero/nrf54l15_sense.png",
+        "png_sha256": "02ef2864f5e8dfe38180a3e1a4ec3fbf01c6a0a5f3a216055b8576a07acbaa37",
+        "bin": "hero_nrf54l15_sense_front.bin",
+        "bin_bytes": 187200,
+        "source_size": [
+          240,
+          260
+        ],
+        "content_bbox": [
+          20,
+          0,
+          219,
+          260
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          240,
+          260
+        ]
+      },
+      "thumb": {
+        "src": "assets/thumb/nrf54l15_sense.png",
+        "png_sha256": "d42a870e3b032d6daf195702cab01c49ef0d171e68e2012722d22dcb3e53c85c",
+        "bin": "thumb_nrf54l15_sense_front.bin",
+        "bin_bytes": 29952,
+        "source_size": [
+          96,
+          104
+        ],
+        "content_bbox": [
+          8,
+          0,
+          88,
+          104
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          96,
+          104
+        ]
+      }
+    },
+    {
+      "asset_key": "nrf54lm20a_sense_front",
+      "product_id": "nrf54lm20a_sense",
+      "is_placeholder": false,
+      "placeholder_product_id": null,
+      "hero": {
+        "src": "assets/hero/nrf54lm20a_sense.png",
+        "png_sha256": "0714b6d5cf36ec590085a7adcf8d034852f55deb4fbb96932e200f3ddf63aafe",
+        "bin": "hero_nrf54lm20a_sense_front.bin",
+        "bin_bytes": 187200,
+        "source_size": [
+          240,
+          260
+        ],
+        "content_bbox": [
+          24,
+          0,
+          216,
+          260
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          240,
+          260
+        ]
+      },
+      "thumb": {
+        "src": "assets/thumb/nrf54lm20a_sense.png",
+        "png_sha256": "f079e6708feea3ad3edd2a618a76f8cf6131693a75734199a06bc4c1616fe29f",
+        "bin": "thumb_nrf54lm20a_sense_front.bin",
+        "bin_bytes": 29952,
+        "source_size": [
+          96,
+          104
+        ],
+        "content_bbox": [
+          9,
+          0,
+          86,
+          104
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          96,
+          104
+        ]
+      }
+    },
+    {
+      "asset_key": "nrf54lm20b_sense_front",
+      "product_id": "nrf54lm20b_sense",
+      "is_placeholder": true,
+      "placeholder_product_id": "nrf54lm20a_sense",
+      "hero": {
+        "src": "assets/hero/nrf54lm20b_sense.png",
+        "png_sha256": "0714b6d5cf36ec590085a7adcf8d034852f55deb4fbb96932e200f3ddf63aafe",
+        "bin": "hero_nrf54lm20b_sense_front.bin",
+        "bin_bytes": 187200,
+        "source_size": [
+          240,
+          260
+        ],
+        "content_bbox": [
+          24,
+          0,
+          216,
+          260
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          240,
+          260
+        ]
+      },
+      "thumb": {
+        "src": "assets/thumb/nrf54lm20b_sense.png",
+        "png_sha256": "f079e6708feea3ad3edd2a618a76f8cf6131693a75734199a06bc4c1616fe29f",
+        "bin": "thumb_nrf54lm20b_sense_front.bin",
+        "bin_bytes": 29952,
+        "source_size": [
+          96,
+          104
+        ],
+        "content_bbox": [
+          9,
+          0,
+          86,
+          104
+        ],
+        "scale": 1.0,
+        "placed_size": [
+          96,
+          104
+        ]
+      }
+    }
+  ],
+  "hero": [
+    240,
+    260
+  ],
+  "thumb": [
+    96,
+    104
+  ],
+  "pixel_format": "RGB565A8 (uint16 LE RGB565 plane + uint8 alpha plane)",
+  "total_bytes": 3908736
+}
